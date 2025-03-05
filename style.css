@@ -13,112 +13,61 @@ html {
 }
 
 /* Configuracion del Body */
-body{
-    background:azure;
-    font-family: miFuente;
-    font-size: 100%;
+body {
+  background: azure;
+  font-family: miFuente;
+  font-size: 100%;
 }
-
 
 .contenedorGeneral {
-  width: 22%;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: fit-content;
+  height: auto;
+  min-height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-.formulario {
+.contenedorTabla {
   width: 100%;
-  background: #ffffff;
-  border: 1px solid #054a8f;
-  border-top: 12px solid #054a8f;
-  border-radius: 3px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 19px;
 }
 
-.tituloPrincipal {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 8px;
-}
-
-/* Estilos google para el input */
-.label {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  display: grid;
-  width: 100%;
-  font-size: 0.9em;
-  grid-template-areas: "input";
-
-  > * {
-    grid-area: input;
-  }
-}
-
-.label__span {
-  transform-origin: left;
-  transition: transform 0.5s color 0.5s;
-  padding: 5px 0 0 0px;
-  color: #054a8f;
-}
-
-.label__input {
-  height: 100%;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #054a8f;
-  background: #ffffff;
-  font-size: 1.2em;
-  border-radius: 0;
-}
-
-.label__input:focus + .label__span,
-.label__input:not(:placeholder-shown) + .label__span,
-.label__input:not(:placeholder-shown) + .label__span:focus-within {
-  color: #054a8f;
-  font-weight: 500;
-  transform: translate(0, -100%) scale(1);
-}
-
-.btnIniciarSesion {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  margin-bottom: 12px;
+.btnConsulta {
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid gray;
   cursor: pointer;
-  border: 1px solid #054a8f;
-  border-radius: 2px;
-  background: #054a8f;
-  color: white;
-  font-size: 1.1em;
-  font-weight: 500;
+}
+.btnConsulta:hover {
+  background: #c0bebe;
 }
 
-.contenedorLinksInferiores {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-a {
-  text-decoration: none;
-  font-size: 0.8em;
-  color: #054a8f;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+/* Estilos celular */
+@media (max-width: 600px) {
   .contenedorGeneral {
-    width: 90%;
-    margin: 20px auto;
+    margin:0 auto;
+    width: fit-content;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
+
+  .btnConsulta{
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .btnConsulta:hover {
+  background: transparent;
+}
 }

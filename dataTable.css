@@ -1,0 +1,53 @@
+/* Asegura que la tabla tenga un borde general */
+.tablaDatos{
+  border: 1px solid gray;
+  width: fit-content;
+  border-collapse: collapse; /* Para evitar bordes dobles */
+}
+
+.tituloTabla {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: em;
+  padding: 5px 0;
+  text-align: center;
+  background: rgb(3, 180, 97);
+  border: 1px solid graysilver;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tablaCampos {
+  font-size: 0.8em;
+  padding: 5px 15px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: #eee3e3;
+  color: rgb(12, 12, 12);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Quitar cualquier borde de las filas */
+table tr {
+  border: none;
+  box-shadow: none;
+}
+
+/* Agregar un borde inferior suave solo a las celdas */
+table td {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 5px;
+  border-bottom: 1px solid gray; /* Borde inferior suave */
+}
+
+/* Evitar que la última fila tenga borde inferior */
+table tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* Estilos celular */
+@media (max-width: 600px) {
+
+
+}
